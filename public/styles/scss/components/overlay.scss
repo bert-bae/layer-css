@@ -1,0 +1,18 @@
+@mixin overlay-apply($color, $opacity) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-color: $color;
+  opacity: $opacity;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  &:before {
+    @include overlay-apply(black, 0.5);
+  }
+}

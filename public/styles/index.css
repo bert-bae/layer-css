@@ -1,0 +1,30 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  overflow-x: hidden;
+  display: inline-block;
+}
+
+.example-box {
+  height: 300px;
+  width: 300px;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+}
+.overlay:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-color: black;
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=index.css.map */

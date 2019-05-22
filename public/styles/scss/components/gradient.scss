@@ -1,0 +1,21 @@
+@mixin gradient-apply($direction, $from, $to) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-image:
+  linear-gradient(
+    $direction,
+    $from, $to
+  );
+}
+
+.gradient {
+  position: relative;
+  z-index: 1;
+  &:before {
+    @include gradient-apply(to right, #FFF, transparent);
+  }
+}
