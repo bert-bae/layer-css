@@ -1,0 +1,26 @@
+{
+  "name": "layer-css",
+  "version": "1.0.0",
+  "description": "CSS layer, overlay, transitions, etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bert-bae/layer-css.git"
+  },
+  "author": "bert-bae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bert-bae/layer-css/issues"
+  },
+  "homepage": "https://github.com/bert-bae/layer-css#readme",
+  "devDependencies": {
+    "sass": "^1.20.1"
+  },
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.17.0"
+  }
+}
