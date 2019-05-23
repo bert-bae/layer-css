@@ -3,13 +3,36 @@ html, body {
   width: 100%;
   min-height: 100%;
   min-width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   display: inline-block;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+.main-container {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  padding: 50px;
+  overflow-x: hidden;
 }
 
 .example-box {
   height: 300px;
   width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  background-image: url("/public/images/example.jpg");
+  background-size: "cover";
+  background-repeat: "no-repeat";
+  background-position: 50%;
+}
+.example-box p {
+  color: #FFF;
 }
 
 .overlay {
@@ -25,6 +48,35 @@ html, body {
   content: "";
   background-color: black;
   opacity: 0.5;
+  z-index: -1;
+}
+
+.gradient {
+  position: relative;
+  z-index: 1;
+}
+.gradient:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-image: linear-gradient(to right, #FFF, transparent);
+}
+
+.shadow {
+  position: relative;
+  z-index: 1;
+}
+.shadow:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=index.css.map */

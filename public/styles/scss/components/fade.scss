@@ -1,17 +1,17 @@
-@mixin fade-apply() {
+@mixin shadow-apply($right, $bottom, $range, $color) {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   content: "";
-  // box-shadow(...)
+  box-shadow: $right $bottom $range $color;
 }
 
-.fade {
+.shadow {
   position: relative;
   z-index: 1;
   &:before {
-    @include fade-apply();
+    @include shadow-apply(5px, 5px, 5px, rgba(0, 0, 0, 0.5));
   }
 }

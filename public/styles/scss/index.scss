@@ -1,15 +1,44 @@
+@mixin background-image($url, $size, $repeat, $position) {
+  background-image: url($url);
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $position;
+}
+
 html, body {
   height: 100%;
   width: 100%;
   min-height: 100%;
   min-width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   display: inline-block;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+.main-container {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  padding: 50px;
+  overflow-x: hidden;
 }
 
 .example-box {
   height: 300px;
   width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  @include background-image('/public/images/example.jpg', 'cover', 'no-repeat', 50%);
+  p {
+    color: #FFF;
+  }
 }
 
 @import './components/overlay.scss';
+@import './components/gradient.scss';
+@import './components/fade.scss';

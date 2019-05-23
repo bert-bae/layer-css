@@ -3,11 +3,11 @@ const ejs = require('ejs');
 const app = express();
 const port = 3001;
 
-app.use("/", express.static("./"));
+app.set('view engine', 'ejs');
+app.use('/public', express.static('public'));
 
-// app.use('ejs')
 app.get('/', (req, res) => {
-  res.send('Hello world');
+  res.render('home');
 })
 
 app.listen(port, () => {
