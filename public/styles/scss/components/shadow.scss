@@ -1,0 +1,30 @@
+@mixin shadow-apply($right, $bottom, $blur, $spread, $color) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  box-shadow: $right $bottom $blur $spread $color;
+}
+
+.shadow {
+  position: relative;
+  z-index: 1;
+  .shadow-apply {
+    @include shadow-apply(5px, 5px, 5px, 5px, rgba(0, 0, 0, 0.5));
+  }
+}
+
+// box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;
+// none	Default value. No shadow is displayed	
+// h-offset	Required. The horizontal offset of the shadow. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box	
+// v-offset	Required. The vertical offset of the shadow. A positive value puts the shadow below the box, a negative value puts the shadow above the box	
+// blur	Optional. The blur radius. The higher the number, the more blurred the shadow will be	
+// spread	Optional. The spread radius. A positive value increases the size of the shadow, a negative value decreases the size of the shadow	
+// color	Optional. The color of the shadow. The default value is the text color. Look at CSS Color Values for a complete list of possible color values.
+
+// Note: In Safari (on PC) the color parameter is required. If you do not specify the color, the shadow is not displayed at all.	
+// inset	Optional. Changes the shadow from an outer shadow (outset) to an inner shadow	
+// initial	Sets this property to its default value. Read about initial	
+// inherit	Inherits this property from its parent element. Read about inherit

@@ -22,8 +22,6 @@ body {
   height: 100%;
   width: 100%;
   display: inline-block;
-  padding: 50px;
-  overflow-x: hidden;
 }
 
 .example-box {
@@ -32,7 +30,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0;
+  margin: 30px auto;
   @include background-image('/public/images/example.jpg', 'cover', 'no-repeat', 50%);
   p {
     color: #FFF;
@@ -41,4 +39,4 @@ body {
 
 @import './components/overlay.scss';
 @import './components/gradient.scss';
-@import './components/fade.scss';
+@import './components/shadow.scss';

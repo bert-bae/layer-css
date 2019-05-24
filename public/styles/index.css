@@ -15,8 +15,6 @@ body {
   height: 100%;
   width: 100%;
   display: inline-block;
-  padding: 50px;
-  overflow-x: hidden;
 }
 
 .example-box {
@@ -25,7 +23,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0;
+  margin: 30px auto;
   background-image: url("/public/images/example.jpg");
   background-size: "cover";
   background-repeat: "no-repeat";
@@ -39,7 +37,7 @@ body {
   position: relative;
   z-index: 1;
 }
-.overlay:before {
+.overlay .overlay-apply {
   position: absolute;
   top: 0;
   left: 0;
@@ -51,11 +49,11 @@ body {
   z-index: -1;
 }
 
-.gradient {
+.gradientL {
   position: relative;
   z-index: 1;
 }
-.gradient:before {
+.gradientL .gradientL-apply {
   position: absolute;
   top: 0;
   left: 0;
@@ -69,14 +67,14 @@ body {
   position: relative;
   z-index: 1;
 }
-.shadow:before {
+.shadow .shadow-apply {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   content: "";
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=index.css.map */
