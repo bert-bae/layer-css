@@ -33,11 +33,11 @@ body {
   color: #FFF;
 }
 
-.overlay {
+.layer-base {
   position: relative;
   z-index: 1;
 }
-.overlay .overlay-apply {
+.layer-base .overlay-apply {
   position: absolute;
   top: 0;
   left: 0;
@@ -49,11 +49,11 @@ body {
   z-index: -1;
 }
 
-.gradientL {
+.layer-base {
   position: relative;
   z-index: 1;
 }
-.gradientL .gradientL-apply {
+.layer-base .gradientL-apply {
   position: absolute;
   top: 0;
   left: 0;
@@ -63,11 +63,25 @@ body {
   background-image: linear-gradient(to right, #FFF, transparent);
 }
 
-.shadow {
+.layer-base {
   position: relative;
   z-index: 1;
 }
-.shadow .shadow-apply {
+.layer-base .gradientR-apply {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-image: radial-gradient(circle at 50%, transparent, #FFF);
+}
+
+.layer-base {
+  position: relative;
+  z-index: 1;
+}
+.layer-base .shadow-apply {
   position: absolute;
   top: 0;
   left: 0;

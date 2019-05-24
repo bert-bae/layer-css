@@ -8,7 +8,7 @@
   box-shadow: $right $bottom $blur $spread $color;
 }
 
-.shadow {
+.layer-base {
   position: relative;
   z-index: 1;
   .shadow-apply {

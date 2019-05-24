@@ -1,4 +1,4 @@
-@mixin gradient-apply($direction, $from, $to) {
+@mixin gradientL-apply($direction, $from, $to) {
   position: absolute;
   top: 0;
   left: 0;
@@ -9,14 +9,6 @@
     $direction,
     $from, $to
   );
-}
-
-.gradientL {
-  position: relative;
-  z-index: 1;
-  .gradientL-apply {
-    @include gradient-apply(to right, #FFF, transparent);
-  }
 }
 
 // background-image: radial-gradient(shape size at position, start-color, ..., last-color);
@@ -34,3 +26,28 @@
 // farthest-side
 // closest-corner
 // farthest-corner
+@mixin gradientR-apply($shape, $position, $from, $to) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-image: radial-gradient($shape at $position, $from, $to);
+}
+
+.layer-base {
+  position: relative;
+  z-index: 1;
+  .gradientL-apply {
+    @include gradientL-apply(to right, #FFF, transparent);
+  }
+}
+
+.layer-base {
+  position: relative;
+  z-index: 1;
+  .gradientR-apply {
+    @include gradientR-apply(circle, 50%, transparent, #FFF);
+  }
+}
