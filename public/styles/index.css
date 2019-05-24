@@ -12,9 +12,11 @@ body {
 }
 
 .main-container {
-  height: 100%;
-  width: 100%;
-  display: inline-block;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .example-box {
