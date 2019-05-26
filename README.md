@@ -13,3 +13,93 @@ Other implementations such as easy to use and apply box-shadows and gradients ar
 ## End Goal
 
 This package is not intended for you to use the Javascript logic in production, but for you to understand how it works. The Javascript functions are simply there for quick and easy way to apply these styles to your elements. Ideally, you should go into the styles/scss/components folder and pull the @mixin files to inspect and understand.
+
+## Overlay CSS
+
+@mixin overlay-apply($color, $opacity) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-color: $color;
+  opacity: $opacity;
+  z-index: -1;
+}
+
+.layer-base {
+  position: relative;
+  z-index: 1;
+  .overlay-apply {
+    @include overlay-apply(black, 0.5);
+  }
+}
+
+## Gradient CSS
+
+@mixin gradientL-apply($direction, $from, $to) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-image: linear-gradient(
+    $direction,
+    $from, $to
+  );
+}
+
+@mixin gradientR-apply($shape, $position, $from, $to) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-image: radial-gradient($shape at $position, $from, $to);
+}
+
+.layer-base {
+  position: relative;
+  z-index: 1;
+  .gradientL-apply {
+    @include gradientL-apply(to right, #FFF, transparent);
+  }
+}
+
+.layer-base {
+  position: relative;
+  z-index: 1;
+  .gradientR-apply {
+    @include gradientR-apply(circle, 50%, transparent, #FFF);
+  }
+}
+
+## Shadow CSS
+
+@mixin shadow-apply($right, $bottom, $blur, $spread, $color) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  box-shadow: $right $bottom $blur $spread $color;
+}
+
+.layer-base {
+  position: relative;
+  z-index: 1;
+  .shadow-apply {
+    @include shadow-apply(5px, 5px, 5px, 5px, rgba(0, 0, 0, 0.5));
+  }
+}
+
+## Example Images
+
+![Overlay Examples]()
+![Linear Gradient Examples]()
+![Radial Gradient Examples]()
+![Shadow Examples]()

@@ -49,6 +49,6 @@ function shadow(targetSelector, options) {
   // Options = { bottom, right, range, color }... For color, use rgba if you want to apply opacity
   $(targetSelector).addClass('layer-base').append($('<div class="shadow-apply">'));
   if (options) {
-    $(`${targetSelector}.layer-base .shadow-apply`).css('box-shadow', `${options.right || 0}px ${options.bottom || 0}px ${options.blur || 0}px ${options.spread || 0}px ${options.color || "#FFF"}`);
+    $(`${targetSelector}.layer-base .shadow-apply`).css('box-shadow', `${options.inset ? "inset" : ""} ${options.right || 0}px ${options.bottom || 0}px ${options.blur || 0}px ${options.spread || 0}px ${options.color || "#FFF"}`);
   }
 }

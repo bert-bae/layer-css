@@ -12,33 +12,51 @@ html, body {
   min-width: 100%;
   overflow: hidden;
   display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
 }
 
+.mainheader {
+  font-size: 24px;
+  font-weight: bold;
+}
+.subheader {
+  font-size: 20px;
+  font-weight: bold;
+}
+.content {
+  font-size: 16px;
+}
 .main-container {
+  width: calc(100% - 100px);
   height: fit-content;
-  width: fit-content;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  padding: 20px 50px;
+  display: block;
+  background-color: whitesmoke;
 }
 
 .example-box {
+  flex: 1 1 300px;
   height: 300px;
   width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px auto;
+  margin: 20px;
   @include background-image('/public/images/example.jpg', 'cover', 'no-repeat', 50%);
   p {
     color: #FFF;
   }
 }
-
 @import './components/overlay.scss';
 @import './components/gradient.scss';
 @import './components/shadow.scss';
+@import './navigation.scss';
+@import './about.scss';
+@import './exampleContainer.scss';

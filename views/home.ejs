@@ -5,54 +5,87 @@
     <% include partials/default_meta.ejs %>
   </head>
   <body>
+    <div class="navigation">
+      <h1 class="mainheader">Layer-CSS</h1>
+    </div>
     <div class="main-container">
-      <div class="example-box">
-        <p>Normal</p>
+      <div class="about-container">
+        <div class="section">
+          <p class="subheader">What is Layer-CSS?</p>
+          <p class="content">Easy to use client-side Javascript and CSS package for applying overlay effects to your elements. Layer-CSS gives you a quick insight into creating overlays, gradients, and shadows on your containers. Specific class names apply the overlays you want or it can be initiated by client-side Javascript to quickly apply Layer-CSS styles to a target Element.
+          <br><br>
+          Simply load index.css to your stylesheet assets and layer-css.js to your Javascript files which contains global functions to apply styling to target elements and call them in your client-side Javascript.</p>
+        </div>
+      </div>
+      <div class="section">
+        <p class="subheader">Overlays</p>
+        <div class="example-container">
+          <div class="example-box layer-base">
+            <div class="overlay-apply"></div>
+            <p>Default Overlay Example</p>
+          </div>
+        </div>
+        <div class="example-container">
+          <div class="example-box custom-overlay-1">
+            <p>Custom Overlay Example</p>
+          </div>
+          <div class="example-box custom-overlay-2">
+            <p>Custom Overlay Example</p>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <p class="subheader">Linear Gradients</p>
+        <div class="example-container">
+          <div class="example-box layer-base">
+            <div class="gradientL-apply"></div>
+            <p>Default Linear-Gradient Example</p>
+          </div>
+        </div>
+        <div class="example-container">
+          <div class="example-box custom-gradient-1">
+            <p>Custom Linear-Gradient Example</p>
+          </div>
+          <div class="example-box custom-gradient-2">
+            <p>Custom Linear-Gradient Example</p>
+          </div>
+        </div>
       </div>
 
-      <div class="example-box layer-base">
-        <div class="overlay-apply"></div>
-        <p>Default Overlay Example</p>
-      </div>
-      <div class="example-box custom-overlay-1">
-        <p>Custom Overlay Example</p>
-      </div>
-      <div class="example-box custom-overlay-2">
-        <p>Custom Overlay Example</p>
-      </div>
-
-      <div class="example-box layer-base">
-        <div class="gradientL-apply"></div>
-        <p>Default Linear-Gradient Example</p>
-      </div>
-      <div class="example-box custom-gradient-1">
-        <p>Custom Linear-Gradient Example</p>
-      </div>
-      <div class="example-box custom-gradient-2">
-        <p>Custom Linear-Gradient Example</p>
+      <div class="section">
+        <p class="subheader">Radial Gradients</p>
+        <div class="example-container">
+          <div class="example-box layer-base">
+            <div class="gradientR-apply"></div>
+            <p>Default Radial-Gradient Example</p>
+          </div>
+        </div>
+        <div class="example-container">
+          <div class="example-box custom-gradientR-1">
+            <p>Custom Radial-Gradient Example</p>
+          </div>
+          <div class="example-box custom-gradientR-2">
+            <p>Custom Radial-Gradient Example</p>
+          </div>
+        </div>
       </div>
 
-      <div class="example-box layer-base">
-        <div class="gradientR-apply"></div>
-        <p>Default Radial-Gradient Example</p>
-      </div>
-      <div class="example-box custom-gradientR-1">
-        <p>Custom Radial-Gradient Example</p>
-      </div>
-      <div class="example-box custom-gradientR-2">
-        <p>Custom Radial-Gradient Example</p>
-      </div>
-      
-      <div class="example-box layer-base">
-        <div class="shadow-apply"></div>
-        <p>Default Shadow Example</p>
-      </div>
-
-      <div class="example-box custom-shadow-1">
-        <p>Custom Shadow Example</p>
-      </div>
-      <div class="example-box custom-shadow-2">
-        <p>Custom Shadow Example</p>
+      <div class="section">
+        <p class="subheader">Shadows</p>
+        <div class="example-container">
+          <div class="example-box layer-base">
+            <div class="shadow-apply"></div>
+            <p>Default Shadow Example</p>
+          </div>
+        </div>
+        <div class="example-container">
+          <div class="example-box custom-shadow-1">
+            <p>Custom Shadow Example</p>
+          </div>
+          <div class="example-box custom-shadow-2">
+            <p>Custom Shadow Example</p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
